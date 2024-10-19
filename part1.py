@@ -90,14 +90,14 @@ def calculate_psnr(original, restored):
     return psnr
 
 restored_image = wiener_filter(noisy_image, img, variance)
-plt.imsave("./restored_image.png", restored_image, cmap='gray')
+plt.imsave("./restored_image_part1.png", restored_image, cmap='gray')
 mse_value = calculate_mse(img, restored_image)
 psnr_value = calculate_psnr(img, restored_image)
 
 print(f'Mean Squared Error (MSE): {mse_value}')
 print(f'Peak Signal-to-Noise Ratio (PSNR): {psnr_value} dB')
 
-output_txt_path = 'psnr_mse_values.txt'
+output_txt_path = 'psnr_mse_values_part1.txt'
 with open(output_txt_path, 'w') as f:
     f.write(f'Mean Squared Error (MSE): {mse_value}\n')
     f.write(f'Peak Signal-to-Noise Ratio (PSNR): {psnr_value} dB\n')

@@ -1,0 +1,2 @@
+Mean Squared Error (MSE): 1230.3746547219114
+Peak Signal-to-Noise Ratio (PSNR): 17.230429846294985 dB
